@@ -25,7 +25,7 @@ export default async function StatisticsPage() {
               لوحة الإحصائيات الشاملة 2026
             </h1>
             <p className="text-sm text-slate-500 dark:text-slate-400">
-              تحليل كامل لنتائج الطلاب، معدلات النجاح والرسوب، ومتوسط الدرجات في امتحانات الثانوية العامة.
+              تحليل كامل لنتائج الطلاب، معدلات النجاح والرسوب، ومتوسط الدرجات في امتحانات الثانوية العامة (المجموع الكلي من 320 درجة).
             </p>
           </div>
         </div>
@@ -74,7 +74,7 @@ export default async function StatisticsPage() {
             {stats.highestDegree} <span className="text-sm font-normal text-slate-400">درجة</span>
           </div>
           <p className="text-xs text-emerald-600 font-medium pt-1">
-            نسبة {((stats.highestDegree / 410) * 100).toFixed(2)}% من المجموع الكلي
+            نسبة {((stats.highestDegree / 320) * 100).toFixed(2)}% من المجموع الكلي (320)
           </p>
         </div>
 

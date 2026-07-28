@@ -85,7 +85,6 @@ async function main() {
 
   console.log("⏳ Processing & ranking student records...");
 
-  // First pass: Parse and calculate rank
   interface ProcessedStudent {
     seating_no: number;
     arabic_name: string;
@@ -132,16 +131,16 @@ async function main() {
       normalized_name,
       total_degree,
       student_case_desc,
-      percentage: 0, // calculated in second pass
+      percentage: 0,
       extra_data,
     });
   }
 
-  // Calculate percentage and sort to calculate rank
-  const denominator = maxDegree > 0 ? (maxDegree > 410 ? maxDegree : 410) : 410;
+  // Base denominator set to 320 for 2026 secondary school results
+  const denominator = 320;
   console.log(`📈 Max degree found: ${maxDegree} (using base denominator ${denominator} for % calculation)`);
 
-  // Calculate percentage
+  // Calculate percentage out of 320
   for (const s of processed) {
     s.percentage = calculatePercentage(s.total_degree, denominator);
   }

@@ -85,9 +85,9 @@ export function getStatusBadge(status: string) {
 }
 
 /**
- * Calculates percentage from total degree. Max total degree defaults to 410 for Egyptian General Secondary.
+ * Calculates percentage from total degree. Max total degree defaults to 320 for Egyptian General Secondary 2026.
  */
-export function calculatePercentage(totalDegree: number, maxDegree: number = 410): number {
+export function calculatePercentage(totalDegree: number, maxDegree: number = 320): number {
   if (!totalDegree || totalDegree <= 0) return 0;
   const pct = (totalDegree / maxDegree) * 100;
   return Math.min(100, Math.max(0, parseFloat(pct.toFixed(2))));

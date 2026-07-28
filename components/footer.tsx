@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 transition-colors mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Main Info */}
           <div className="md:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
@@ -54,23 +54,6 @@ export function Footer() {
                 <Link href="/statistics" className="hover:text-brand-primary transition-colors">
                   إحصائيات النجاح والرسوب
                 </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Admin & System */}
-          <div>
-            <h4 className="font-semibold text-slate-900 dark:text-white text-sm mb-4">النظام والإدارة</h4>
-            <ul className="space-y-2.5 text-sm text-slate-600 dark:text-slate-400">
-              <li>
-                <Link href="/admin/import" className="hover:text-brand-primary transition-colors">
-                  رفع ملف الاكسيل (Excel)
-                </Link>
-              </li>
-              <li>
-                <span className="text-slate-400 dark:text-slate-500 text-xs block mt-2">
-                  دقة فائقة وسرعة بحث تتجاوز 900,000 طالب.
-                </span>
               </li>
             </ul>
           </div>

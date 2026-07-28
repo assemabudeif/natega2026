@@ -154,7 +154,7 @@ export default async function StudentResultPage({ params }: StudentResultPagePro
               <div className="text-4xl font-black text-slate-900 dark:text-white">
                 {student.total_degree}
               </div>
-              <span className="text-xs text-slate-500 dark:text-slate-400 block">من إجمالي 410 درجة</span>
+              <span className="text-xs text-slate-500 dark:text-slate-400 block">من إجمالي 320 درجة</span>
             </div>
 
             {/* Percentage */}

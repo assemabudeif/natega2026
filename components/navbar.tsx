@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { GraduationCap, Award, BarChart3, Upload, Home, Search } from "lucide-react";
+import { GraduationCap, Award, BarChart3, Home, Search } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
 
 export function Navbar() {
@@ -12,7 +12,6 @@ export function Navbar() {
     { href: "/", label: "الرئيسية", icon: Home },
     { href: "/top", label: "الأوائل", icon: Award },
     { href: "/statistics", label: "الإحصائيات", icon: BarChart3 },
-    { href: "/admin/import", label: "إدارة البيانات", icon: Upload },
   ];
 
   return (

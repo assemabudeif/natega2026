@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { GraduationCap, ShieldCheck, FileSpreadsheet, Heart } from "lucide-react";
+import { GraduationCap, ShieldCheck, FileSpreadsheet, Heart, ExternalLink } from "lucide-react";
 
 export function Footer() {
   return (
@@ -33,7 +33,7 @@ export function Footer() {
 
           {/* Quick Navigation */}
           <div>
-            <h4 className="font-semibold text-slate-900 dark:text-white text-sm mb-4">روابط سريعة</h4>
+            <h4 className="font-semibold text-slate-900 dark:text-white text-sm mb-4">روابط سريعة ومواقع النتيجة</h4>
             <ul className="space-y-2.5 text-sm text-slate-600 dark:text-slate-400">
               <li>
                 <Link href="/" className="hover:text-brand-primary transition-colors">
@@ -54,6 +54,17 @@ export function Footer() {
                 <Link href="/statistics" className="hover:text-brand-primary transition-colors">
                   إحصائيات النجاح والرسوب
                 </Link>
+              </li>
+              <li>
+                <a
+                  href="https://natega.youm7.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-amber-600 dark:text-amber-400 font-bold hover:underline flex items-center gap-1 pt-1"
+                >
+                  <span>موقع اليوم السابع للنتيجة الكاملة</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
               </li>
             </ul>
           </div>

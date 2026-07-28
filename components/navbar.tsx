@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { GraduationCap, Award, BarChart3, Home, Search } from "lucide-react";
+import { GraduationCap, Award, BarChart3, Home, Search, ExternalLink } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
 
 export function Navbar() {
@@ -12,6 +12,7 @@ export function Navbar() {
     { href: "/", label: "الرئيسية", icon: Home },
     { href: "/top", label: "الأوائل", icon: Award },
     { href: "/statistics", label: "الإحصائيات", icon: BarChart3 },
+    { href: "https://natega.youm7.com/", label: "اليوم السابع", icon: ExternalLink, external: true },
   ];
 
   return (
@@ -35,6 +36,22 @@ export function Navbar() {
           {navLinks.map((link) => {
             const Icon = link.icon;
             const isActive = pathname === link.href;
+
+            if (link.external) {
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-bold text-amber-700 bg-amber-50 hover:bg-amber-100 dark:bg-amber-950/60 dark:text-amber-300 dark:hover:bg-amber-900/80 border border-amber-300 dark:border-amber-700/60 transition-all shadow-sm"
+                >
+                  <Icon className="w-4 h-4 text-amber-600" />
+                  <span>{link.label}</span>
+                </a>
+              );
+            }
+
             return (
               <Link
                 key={link.href}
@@ -70,6 +87,22 @@ export function Navbar() {
         {navLinks.map((link) => {
           const Icon = link.icon;
           const isActive = pathname === link.href;
+
+          if (link.external) {
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-bold text-amber-600 dark:text-amber-400"
+              >
+                <Icon className="w-5 h-5" />
+                <span>{link.label}</span>
+              </a>
+            );
+          }
+
           return (
             <Link
               key={link.href}

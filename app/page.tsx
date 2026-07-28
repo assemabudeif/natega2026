@@ -3,7 +3,7 @@ import { SearchBox } from "@/components/search-box";
 import { StatsCard } from "@/components/stats-card";
 import { TopStudentsCarousel } from "@/components/top-students-carousel";
 import { getStatisticsAction, getTopStudentsAction } from "@/lib/actions";
-import { Users, CheckCircle2, XCircle, Award, TrendingUp, Sparkles, BookOpen, ShieldCheck } from "lucide-react";
+import { Users, CheckCircle2, XCircle, TrendingUp, Sparkles, BookOpen, ShieldCheck, ExternalLink } from "lucide-react";
 
 export const revalidate = 60; // Cache landing page statistics for 60 seconds
 
@@ -37,6 +37,19 @@ export default async function HomePage() {
             <SearchBox size="large" autoFocus />
           </div>
 
+          {/* Youm7 Quick Link Pill */}
+          <div className="pt-2">
+            <a
+              href="https://natega.youm7.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-2xl bg-amber-500/10 hover:bg-amber-500/20 text-amber-800 dark:text-amber-300 border border-amber-500/30 text-xs sm:text-sm font-bold transition-all shadow-sm group"
+            >
+              <span>موقع اليوم السابع للنتيجة الكاملة</span>
+              <ExternalLink className="w-4 h-4 text-amber-600 group-hover:translate-x-0.5 transition-transform" />
+            </a>
+          </div>
+
           {/* Quick Badges */}
           <div className="flex flex-wrap items-center justify-center gap-6 pt-4 text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium">
             <span className="flex items-center gap-1.5">
@@ -49,7 +62,7 @@ export default async function HomePage() {
             </span>
             <span className="flex items-center gap-1.5">
               <TrendingUp className="w-4 h-4 text-amber-500" />
-              سرعة بحثائقة لأكثر من 900 ألف طالب
+              سرعة بحث لأكثر من 900 ألف طالب
             </span>
           </div>
         </div>
@@ -67,7 +80,7 @@ export default async function HomePage() {
               href="/statistics"
               className="text-sm font-bold text-brand-primary hover:underline"
             >
-              عرض التقرير التفصيل الكامل ←
+              عرض التقرير التفصيلي الكامل ←
             </Link>
           </div>
 
@@ -118,7 +131,7 @@ export default async function HomePage() {
             </div>
             <h3 className="font-bold text-slate-900 dark:text-white text-lg">البحث برقم الجلوس</h3>
             <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-              ادخل رقم الجلوس المكون من 7 أرقام للحصول على النتيجة المباشرة والتقرير التفصيلي مع إمكانية الطباعة وتوليد رمز QR.
+              ادخل رقم الجلوس للحصول على النتيجة المباشرة والتقرير التفصيلي مع إمكانية الطباعة وتوليد رمز QR.
             </p>
           </div>
 
@@ -136,9 +149,9 @@ export default async function HomePage() {
             <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center font-bold">
               3
             </div>
-            <h3 className="font-bold text-slate-900 dark:text-white text-lg">طباعة ومشاركة النتيجة</h3>
+            <h3 className="font-bold text-slate-900 dark:text-white text-lg">بوابة اليوم السابع للنتيجة</h3>
             <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-              وفرنا لك زر طباعة سريع متوافق مع كافة الطابعات، بالإضافة لرابط مشاركة مباشر على الواتساب والتليجرام والفيسبوك.
+              يمكنك أيضاً متابعة نتيجة اليوم السابع الرسمية عبر الرابط المباشر في شريط التنقل العلوي.
             </p>
           </div>
         </section>

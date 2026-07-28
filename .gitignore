@@ -30,7 +30,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Large SQLite DB file (326MB exceeds GitHub 100MB limit)
+# Large uncompressed SQLite DB file (ignored because dev.db.gz is committed)
 prisma/dev.db
 prisma/dev.db-journal
 prisma/dev.db-wal
+prisma/test_light.db

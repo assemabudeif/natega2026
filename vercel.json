@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npx prisma generate && npm run import-results && next build",
+  "buildCommand": "node scripts/decompress-db.js && npx prisma generate && next build",
   "framework": "nextjs",
   "installCommand": "npm install"
 }

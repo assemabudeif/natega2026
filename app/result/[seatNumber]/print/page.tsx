@@ -30,7 +30,7 @@ export default async function PrintResultPage({ params }: PrintPageProps) {
             <h2 className="text-lg font-bold">وزارة التربية والتعليم والتعليم الفني</h2>
             <p className="text-sm">بطاقة إخطار نتيجة امتحان شهادة الثانوية العامة 2026</p>
           </div>
-          <QRCodeCanvas text={`https://natega2026.eg/result/${student.seating_no}`} size={80} />
+          <QRCodeCanvas path={`/result/${student.seating_no}`} size={80} />
         </div>
 
         {/* Student Details */}

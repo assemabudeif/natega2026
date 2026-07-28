@@ -220,9 +220,9 @@ export default async function StudentResultPage({ params }: StudentResultPagePro
               </div>
             </div>
 
-            {/* QR Code Container for Printing */}
+            {/* Dynamic QR Code Container */}
             <div className="flex items-center gap-3">
-              <QRCodeCanvas text={`https://natega2026.eg/result/${student.seating_no}`} size={70} />
+              <QRCodeCanvas path={`/result/${student.seating_no}`} size={70} />
               <div className="text-[10px] text-slate-400 leading-tight max-w-[100px]">
                 امسح الرمز للتحقق من صحة البطاقة
               </div>

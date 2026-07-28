@@ -1,19 +1,35 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import QRCode from "qrcode";
 
 interface QRCodeCanvasProps {
-  text: string;
+  text?: string;
+  path?: string;
   size?: number;
 }
 
-export function QRCodeCanvas({ text, size = 180 }: QRCodeCanvasProps) {
+export function QRCodeCanvas({ text, path, size = 180 }: QRCodeCanvasProps) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const [fullUrl, setFullUrl] = useState(text || "");
 
   useEffect(() => {
-    if (canvasRef.current && text) {
-      QRCode.toCanvas(canvasRef.current, text, {
+    let resolved = text || "";
+    if (typeof window !== "undefined") {
+      if (path) {
+        resolved = `${window.location.origin}${path}`;
+      } else if (text && text.startsWith("/")) {
+        resolved = `${window.location.origin}${text}`;
+      } else if (!text) {
+        resolved = window.location.href;
+      }
+    }
+    setFullUrl(resolved);
+  }, [text, path]);
+
+  useEffect(() => {
+    if (canvasRef.current && fullUrl) {
+      QRCode.toCanvas(canvasRef.current, fullUrl, {
         width: size,
         margin: 2,
         color: {
@@ -22,7 +38,7 @@ export function QRCodeCanvas({ text, size = 180 }: QRCodeCanvasProps) {
         },
       }).catch((err) => console.error("QR Code Error:", err));
     }
-  }, [text, size]);
+  }, [fullUrl, size]);
 
   return <canvas ref={canvasRef} className="rounded-xl border border-slate-200 shadow-sm" />;
 }

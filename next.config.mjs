@@ -6,6 +6,10 @@ const nextConfig = {
       bodySizeLimit: '50mb',
     },
   },
+  outputFileTracingIncludes: {
+    '/api/**/*': ['./prisma/dev.db'],
+    '/*': ['./prisma/dev.db'],
+  },
 };
 
 export default nextConfig;

@@ -102,3 +102,11 @@ docker-compose up -d --build
 │   └── import-excel.ts            # High-speed Excel import CLI script
 └── natega2026.xlsx                # Source Excel Data file (~919k records)
 ```
+
+---
+
+## 👨‍💻 المطور (Developer)
+
+تم التطوير بواسطة **عاصم أبو ضيف (Assem Abu Deif)**  
+🌐 الموقع الشخصي: [https://assemabudeif.com](https://assemabudeif.com)
+

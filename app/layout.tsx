@@ -26,7 +26,8 @@ export const metadata: Metadata = {
     "وزارة التربية والتعليم مصر",
     "درجات الثانوية العامة 2026",
   ],
-  authors: [{ name: "Egyptian Secondary Education Portal" }],
+  authors: [{ name: "Assem Abu Deif", url: "https://assemabudeif.com" }],
+  creator: "Assem Abu Deif",
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000"),
   openGraph: {
     title: "نتيجة الثانوية العامة 2026 برقم الجلوس والاسم",

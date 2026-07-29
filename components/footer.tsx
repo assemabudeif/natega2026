@@ -72,9 +72,18 @@ export function Footer() {
 
         <div className="border-t border-slate-100 dark:border-slate-800 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 dark:text-slate-400 gap-4">
           <p>© 2026 جميع الحقوق محفوظة - نتيجة الثانوية العامة</p>
-          <div className="flex items-center gap-1">
-            <span>صمم ونفذ بأعلى معايير السرعة والأمان</span>
-            <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500" />
+          <div className="flex flex-wrap items-center gap-1.5">
+            <span>تم التطوير بواسطة</span>
+            <a
+              href="https://assemabudeif.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-brand-primary dark:text-blue-400 hover:underline inline-flex items-center gap-1 transition-colors dir-ltr"
+            >
+              <span>Assem Abu Deif</span>
+              <ExternalLink className="w-3 h-3" />
+            </a>
+            <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500 mr-0.5" />
           </div>
         </div>
       </div>
